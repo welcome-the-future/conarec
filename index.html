@@ -109,16 +109,14 @@
       arjs="sourceType:webcam; debugUIEnabled: false; patternRatio:0.75;"
     >
       <a-assets>
-        <a-asset-item id="robo-obj" src="mascote.obj"></a-asset-item>
-        <a-asset-item id="robo-mtl" src="mascote.mtl"></a-asset-item>
+        <a-asset-item id="robo" src="robo.gltf"></a-asset-item>
       </a-assets>
       <a-marker type="pattern" url="robo.patt">
         <a-obj-model
-          src="#robo-obj"
-          mtl="#robo-mtl"
-          position="0 0 3"
+          gltf-model="#robo"
+          position="0 0 5"
           rotation="-90 0 0"
-          scale="0.1 0.1 0.1"
+          scale="0.4 0.4 0.4"
           animation-mixer
         ></a-obj-model>
       </a-marker>
