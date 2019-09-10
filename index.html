@@ -63,41 +63,6 @@
       left: -1px;
       background-image: url("./bottom.left.png");
     }
-
-    /*-----------------------------------------------*/
-
-    #splash {
-      position: absolute;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 21;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      width: 200px;
-      height: 200px;
-      margin: auto;
-    }
-
-    @keyframes spin {
-      0% {
-        transform: rotate(0deg);
-      }
-      100% {
-        transform: rotate(360deg);
-      }
-    }
-
-    .loading {
-      width: 35px;
-      height: 35px;
-      border-radius: 50%;
-      border: 0.25rem solid rgba(255, 255, 255, 0.2);
-      border-top-color: white;
-      animation: spin 1s infinite linear;
-    }
   </style>
   <body style="margin : 0px; overflow: hidden;">
     <div id="splash">
@@ -114,9 +79,9 @@
       <a-marker type="pattern" url="robo.patt">
         <a-obj-model
           gltf-model="#robo"
-          position="0 0 5"
+          position="0 0 3"
           rotation="-90 0 0"
-          scale="0.1 0.1 0.1"
+          scale="0.15 0.15 0.15"
           animation-mixer
         ></a-obj-model>
       </a-marker>
@@ -136,19 +101,6 @@
   </body>
 
   <script>
-    window.onload = function() {
-      var scene = document.querySelector("a-scene");
-      setInterval(() => {
-        if (scene == null) {
-          $("#snap-button").css("display", "none");
-          $("#splash").css("display", "block");
-        } else {
-          $("#snap-button").css("display", "block");
-          $("#splash").css("display", "none");
-        }
-      }, 2000);
-    };
-
     document
       .getElementById("snap-button")
       .addEventListener("click", function() {
