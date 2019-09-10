@@ -64,7 +64,9 @@
       background-image: url("./bottom.left.png");
     }
   </style>
-  <body style="margin : 0px; overflow: hidden;">
+  <body
+    style="margin : 0px; overflow: hidden; detectionMode: mono_and_matrix; matrixCodeType: 3x3;"
+  >
     <div id="splash">
       <div class="loading"></div>
     </div>
@@ -72,6 +74,8 @@
     <a-scene
       embedded
       arjs="sourceType:webcam; debugUIEnabled: false; patternRatio:0.75;"
+      renderer="antialias: true; colorManagement: true; ortObjects: true;
+      physicallyCorrectLights: true; maxCanvasWidth: 1080;maxCanvasHeight: 1080;"
     >
       <a-assets>
         <a-asset-item id="robo" src="robo.gltf"></a-asset-item>
