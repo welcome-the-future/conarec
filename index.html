@@ -74,8 +74,7 @@
       arjs="sourceType:webcam; debugUIEnabled: false; patternRatio:0.75;"
     >
       <a-assets>
-        <a-asset-item id="robo" src="/robo.gltf"></a-asset-item>
-        <!-- <a-asset-item id="tel" src="/tel.gltf"></a-asset-item> -->
+        <a-asset-item id="robo" src="robo.gltf"></a-asset-item>
       </a-assets>
       <a-marker type="pattern" url="robo.patt">
         <a-obj-model
@@ -85,13 +84,6 @@
           scale="0.15 0.15 0.15"
           animation-mixer
         ></a-obj-model>
-        <!-- <a-entity
-          gltf-model="#tel"
-          position="0 0 0"
-          rotation="0 0 0"
-          scale="0.005 0.005 0.005"
-          animation-mixer
-        ></a-entity> -->
       </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
